@@ -17,11 +17,12 @@
       column-gap: 16px;
     }
     @media (min-width: $screen-md) {
-      column-gap: 32px;
+      column-gap: 24px;
+      height: 160px;
     }
 
-    @media (min-width: $screen-md) {
-      height: 160px;
+    @media (min-width: $screen-xl) {
+      column-gap: 32px;
     }
   }
 
