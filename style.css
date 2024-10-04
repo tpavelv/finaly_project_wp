@@ -1039,13 +1039,15 @@ template {
 }
 @media (min-width: 768px) {
   .main__repair-type-wrapper {
-    -moz-column-gap: 32px;
-         column-gap: 32px;
+    -moz-column-gap: 24px;
+         column-gap: 24px;
+    height: 160px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
   .main__repair-type-wrapper {
-    height: 160px;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
   }
 }
 .main__repair-type-card {
