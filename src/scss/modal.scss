@@ -1,0 +1,152 @@
+.modal-form {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  background-color: $blur;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: $font-primary;
+  overflow: scroll;
+
+  &__wrapper {
+    box-sizing: border-box;
+    width: 288px;
+    min-height: 100%;
+    z-index: 2000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px 16px 70px 16px;
+    background-color: $bg-primary-color;
+    box-shadow: -2px 0px 4px 0px $menu-shadow-color--first,
+      16px 0px 52px 0px $menu-shadow-color--second;
+
+    @media (min-width: $screen-xl) {
+      width: 376px;
+      padding: 40px 32px 70px 32px;
+
+      &::before {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-color: $shadow-color;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__button--close {
+    background-image: url('../img/close.svg');
+    width: 40px;
+    height: 40px;
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-xl) {
+      position: absolute;
+      top: -8px;
+      left: -105px;
+    }
+  }
+
+  &__button--submit {
+    width: 136px;
+    height: 32px;
+    background-color: $button-color;
+    color: $bg-primary-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 20px;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+
+    &::before {
+      content: '';
+      width: 8px;
+      height: 10px;
+      background-image: url('../img/dropdown.svg');
+      position: absolute;
+      top: 11px;
+      right: 20px;
+    }
+  }
+
+  &__title {
+    line-height: 32px;
+    position: relative;
+    margin-bottom: 24px;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 32px;
+      background-color: $active-linc-color;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      position: absolute;
+      left: -16px;
+      bottom: 0;
+
+      @media (min-width: $screen-xl) {
+        width: 3px;
+        height: 40px;
+        border-radius: 3px;
+        left: -33px;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 48px;
+    border: 1px solid $input-border;
+    border-radius: 10px;
+    font-family: $font-primary;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    &::placeholder {
+      color: $input-text;
+      letter-spacing: -0.2px;
+    }
+
+    &--textarea {
+      height: 116px;
+      resize: none;
+      padding-top: 12px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 16px;
+    color: $font-secondary-color;
+    font-weight: 500;
+  }
+
+  &__personal-data {
+    color: $button-color;
+  }
+
+  &__link {
+    color: $button-color;
+  }
+}

@@ -1,0 +1,185 @@
+.main__brands {
+  height: 220px;
+
+  @media (min-width: $screen-md) {
+    height: 320px;
+  }
+  @media (min-width: $screen-xl) {
+    height: 338px;
+  }
+}
+
+.slider {
+  font-family: $font-primary;
+  background-color: $bg-secondary-color;
+
+  &__title {
+    margin: 0;
+    padding: 16px;
+    line-height: 24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $font-secondary-color;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    background-image: linear-gradient(
+      to right,
+      $bg-secondary-color,
+      $bg-primary-color
+    );
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $shadow-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: $screen-md) {
+      padding: 16px 24px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 16px 32px;
+    }
+  }
+
+  &__swiper {
+    padding-left: 16px;
+    padding-top: 16px;
+    box-sizing: border-box;
+    width: 100%;
+
+    &::before {
+      content: '';
+      width: 24px;
+      height: 74px;
+      position: absolute;
+      right: 0px;
+      top: 16px;
+      background-image: linear-gradient(
+        to left,
+        $fading-color-first,
+        $fading-color-second
+      );
+      z-index: 100;
+    }
+    @media (min-width: $screen-md) {
+      padding: 24px;
+      padding-bottom: 0;
+      overflow: hidden;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &__swiper-wrapper {
+    column-gap: 16px;
+    height: 100px;
+    padding-right: 64px;
+
+    @media (min-width: $screen-md) {
+      flex-wrap: wrap;
+      height: 160px;
+      row-gap: 16px;
+      column-gap: 24px;
+
+      overflow: hidden;
+
+      &--larger {
+        height: auto;
+      }
+    }
+
+    @media (min-width: $screen-xl) {
+      column-gap: 32px;
+    }
+  }
+
+  &__card {
+    flex-basis: 206px;
+    height: 70px;
+    background-color: $bg-primary-color;
+    border: 1px solid $input-border;
+    border-radius: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md) {
+      flex-basis: 190px;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex-basis: 206px;
+    }
+  }
+
+  &__card-link {
+    width: 36px;
+    height: 36px;
+    border: 2px solid $button-color;
+    border-radius: 50%;
+    background: url(../img/dropdown.svg) 50% 50% no-repeat;
+  }
+
+  &__swiper-button {
+    display: none;
+
+    @media (min-width: $screen-md) {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-left: 33px;
+      color: $font-primary-color;
+      position: relative;
+      margin-top: 24px;
+      display: block;
+
+      &::before {
+        content: '';
+        width: 24px;
+        height: 24px;
+        background-image: url('../img/expand.svg');
+        left: -33px;
+        position: absolute;
+      }
+    }
+  }
+
+  &--larger {
+    height: auto;
+  }
+}
+
+.button__icon--rotate::before {
+  transform: scaleY(-1);
+}
+
+/* Пагинация */
+.slider__swiper-pagination .swiper-pagination-bullet {
+  background-color: $pagination-color;
+  background-color: $pagination-color--active;
+
+  width: 12px;
+  height: 12px;
+}
+
+.slider .slider__swiper-pagination .swiper-pagination-bullet {
+  margin: 0 6px;
+}
+.slider__swiper .slider__swiper-pagination {
+  top: 100px;
+  padding: 0;
+  margin: 0;
+  height: 14px;
+}

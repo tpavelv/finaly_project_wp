@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  max-width: 1072px;
+  height: 88px;
+  box-shadow: inset 0px -1px 0px 0px $shadow-color;
+
+  @media (min-width: $screen-md) {
+    padding: 0 24px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+
+  &__left-column {
+    display: flex;
+    width: 170px;
+    align-items: center;
+
+    @media (min-width: $screen-md) {
+      width: 180px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 2px;
+        height: 32px;
+        border: none;
+        border-radius: 1px;
+        background-color: $input-border;
+        left: 60px;
+        top: 12px;
+        position: absolute;
+      }
+    }
+  }
+
+  &__central-column {
+    display: none;
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  }
+
+  &__right-column {
+    display: flex;
+    width: 118px;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 2px;
+      height: 32px;
+      border: none;
+      border-radius: 1px;
+      background-color: $input-border;
+      left: -1px;
+      top: 4px;
+      position: absolute;
+    }
+  }
+
+  &__logo {
+    margin: 0 auto;
+
+    @media (min-width: $screen-md) {
+      margin-right: 0;
+      margin-left: 20px;
+    }
+  }
+
+  &__menu-button {
+    width: 40px;
+    height: 40px;
+
+    &--burger {
+      background-image: url('../img/burger.svg');
+
+      order: -1;
+
+      @media (min-width: $screen-md) {
+        margin-right: 22px;
+      }
+    }
+
+    &--repair {
+      background-image: url('../img/repair.svg');
+    }
+
+    &--checkstatus {
+      background-image: url('../img/checkstatus.svg');
+    }
+
+    @media ($screen-md < width < $screen-xl) {
+      &--call {
+        background-image: url('../img/call.svg');
+      }
+
+      &--chat {
+        background-image: url('../img/chat.svg');
+      }
+
+      &--profile {
+        background-image: url('../img/profile.svg');
+      }
+    }
+  }
+}

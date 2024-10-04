@@ -1,0 +1,53 @@
+.main {
+  max-width: 1120px;
+  &__repair-type {
+    height: 308px;
+  }
+
+  &__repair-type-slider {
+    &::before {
+      height: 166px;
+    }
+  }
+
+  &__repair-type-wrapper {
+    height: 188px;
+
+    @media (min-width: $screen-md) {
+      column-gap: 16px;
+    }
+    @media (min-width: $screen-md) {
+      column-gap: 32px;
+    }
+
+    @media (min-width: $screen-md) {
+      height: 160px;
+    }
+  }
+
+  &__repair-type-card {
+    height: 126px;
+    padding: 16px;
+  }
+  &__repair-type-card-title {
+    align-self: flex-start;
+    color: $font-primary-color;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+  &__repair-type-card-link {
+    align-self: flex-end;
+  }
+}
+
+.slider__swiper .main__repair-type-pagination {
+  top: 188px;
+}
+.slider--larger {
+  height: auto;
+}
+.slider__swiper-wrapper--larger {
+  height: auto;
+}

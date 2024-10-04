@@ -1,0 +1,10 @@
+.button {
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  font-family: $font-primary;
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,17 +1,36 @@
-$bgColor: #24292e;
-$text: #fff;
+@import './my-reset.css';
+@import './fonts.scss';
+@import './variables.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+@import './button.scss';
+@import './slider.scss';
+
+@import './header.scss';
+@import './main.scss';
+@import './slider-repair-type.scss';
+@import './slider-price.scss';
+@import './footer.scss';
+
+@import './menu.scss';
+@import './modal.scss';
+
+.wrapper-page-center {
+  max-width: 768px;
+  margin: 0 auto;
+  @media (min-width: $screen-xl) {
+    max-width: 1426px;
+    display: grid;
+    grid-template-areas:
+      'menu main'
+      'menu footer';
+  }
 }
+.main__side-menu {
+  display: none;
+  height: 100%;
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+  @media (min-width: $screen-xl) {
+    grid-area: menu;
+    display: block;
+  }
 }
