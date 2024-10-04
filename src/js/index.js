@@ -4,4 +4,3 @@ import './main';
 import './slider';
 import './menu';
 import './modal';
-console.log('123');
