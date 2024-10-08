@@ -40,3 +40,17 @@ for (let i = 0; i < chatButtons.length; i++) {
 for (let i = 0; i < closeButtons.length; i++) {
   closeModal(closeButtons[i]);
 }
+
+modalCall.addEventListener('click', function (evt) {
+  if (evt.target.classList.contains('modal-form')) {
+    modalCall.style.display = 'none';
+    body.style.overflow = 'auto';
+  }
+});
+
+modalChat.addEventListener('click', function (evt) {
+  if (evt.target.classList.contains('modal-form')) {
+    modalChat.style.display = 'none';
+    body.style.overflow = 'auto';
+  }
+});
